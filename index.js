@@ -1,12 +1,19 @@
 import React from 'react'
 import ReactDataGrid from 'react-data-grid';
 import ReactDataGridPlugins from 'react-data-grid/addons';
+import Faker from 'Faker'
 import app from './css/index.css';
 import LikeCon from './components/LikeCon.js'
-import Timer from './components/Timer.js'
+import Timer from './components/Timer'
 
 
-
+var user = {
+  name: Faker.Name.findName(),
+  email: Faker.Internet.email(),
+  address: Faker.Address.streetAddress(),
+  bio: Faker.Lorem.sentence(),
+  image: Faker.Image.avatar()
+};
 
 // Rapid case to fast learn Reactjs
 // https://toddmotto.com/react-create-class-versus-component/
@@ -73,22 +80,21 @@ Button.propTypes = {
 Button.defaultProps = {
 
 };
+var text= Faker.Name.findName();
 
-var randomName = faker.name.findName(); // Rowan Nikolaus
-var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
-var randomCard = faker.helpers.createCard(); // random contact card containing many properties
+
 
 class App extends React.Component {
 
-
+		
   render() {
     return (
       <div className="app">
-        <Contacts kind="rectangle"/>
+  <Contacts kind={user.name}/>
 		<Timer />
 		<LikeCon />
         <Button />
-		
+
       </div>
     );
   }
