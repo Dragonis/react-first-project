@@ -35,7 +35,7 @@ var columns = [
 }
 ]
 
-var Example = React.createClass({
+var Table = React.createClass({
   render: function() {
     return  (<ReactDataGrid
     columns={columns}
@@ -45,4 +45,4 @@ var Example = React.createClass({
   }
 });
 
-export default Example
+export default Table

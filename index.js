@@ -1,17 +1,17 @@
 import React from 'react'
 
 
-import app from './css/index.css';
-import style from './css/menuexample.css';
+import app from './css/app.css';
+import stylemenuExample from './css/menuexample.css';
 import LikeCon from './components/LikeCon.js'
 import Timer from './components/Timer'
 import Contacts from './components/Contacts'
 import MenuExample from './components/MenuExample'
-import Example from './components/Example'
+import Table from './components/Table'
 import Button from './components/Button'
-import SearchExample from './components/SearchExample'
 import Faker from 'Faker'
-import styleSearchExample from './css/SearchExample.css';
+import SearchExample from './components/SearchExample'
+import stylemenuExampleSearchExample from './css/SearchExample.css';
 
 
 // other examples
@@ -62,7 +62,7 @@ class App extends React.Component {
 		<Timer />
 		<LikeCon />
         <Button />
-		<Example />
+		<Table />
 		<SearchExample items={ libraries } />
       </div>
     );
