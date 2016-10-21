@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react';
 import { render } from 'react-dom';
 // Import routing components
 import {Router, Route} from 'react-router';
+
 
 import app from './css/app.css';
 import stylemenuExample from './css/menuexample.css';
@@ -14,7 +15,6 @@ import Button from './components/Button'
 import Faker from 'Faker'
 import SearchExample from './components/SearchExample'
 import stylemenuExampleSearchExample from './css/SearchExample.css';
-
 
 // other examples
 // http://tutorialzine.com/2014/07/5-practical-examples-for-learning-facebooks-react-framework/
@@ -51,28 +51,45 @@ var libraries = [
 ];
 
 
+class Home extends Component {
+    render(){
+        return (<h1>Home Page</h1>);
+    }
+}
+
+// More components
+class Car extends Component {
+    render(){
+        return (<h1>Cars page</h1>);
+    }
+}
+
+class About extends Component {
+    render(){
+        return (<h1>About page</h1>);
+    }
+}
 
 
 class App extends React.Component {
 	
 	
   render() {
-	    {/*
-	  Practicise/Exercise skill with react-route
-	  // to learn --> https://css-tricks.com/learning-react-router/
-	  <Router>
-    <Route path="/home" component={App} />
-    <Route path="/users" component={Table} />
-    <Route component={MenuExample}>
-		<Route path="/widgets" component={LikeCon} />
-	</Route>
-  </Router> 
-	  */}
+	
   return (
-	<div className="app" >
 
-  
-	   <MenuExample items={ ['Home', 'Services', 'About', 'Contact us'] } />,
+	<div className="app" >
+  	 <MenuExample items={ ['Home', 'Cars', 'About'] } />,
+
+      <a href="#/home">Home</a>
+      <a href="#/cars">Cars</a>
+      <a href="#/about">About</a>
+	  
+    <Router>
+        <Route path="/home" component={Home}/>
+        <Route path="/cars" component={Car}/>
+        <Route path="/about" component={About}/>
+    </Router>
   <Contacts kind={user.name}/>
 		<Timer />
 		<LikeCon />
