@@ -108,7 +108,6 @@ class App extends React.Component {
       <a href="#/about">About</a>
 	  
     <Router>
-	<DefaultRoute handler={App}/>
         <Route path="/home" component={Home}/>
         <Route path="/cars" component={Car}/>
         <Route path="/about" component={About}/>
