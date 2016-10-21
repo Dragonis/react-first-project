@@ -1,5 +1,7 @@
 import React from 'react'
-
+import { render } from 'react-dom';
+// Import routing components
+import {Router, Route} from 'react-router';
 
 import app from './css/app.css';
 import stylemenuExample from './css/menuexample.css';
@@ -52,11 +54,24 @@ var libraries = [
 
 
 class App extends React.Component {
-
-		
+	
+	
   render() {
-    return (
-      <div className="app" >
+	    {/*
+	  Practicise/Exercise skill with react-route
+	  // to learn --> https://css-tricks.com/learning-react-router/
+	  <Router>
+    <Route path="/home" component={App} />
+    <Route path="/users" component={Table} />
+    <Route component={MenuExample}>
+		<Route path="/widgets" component={LikeCon} />
+	</Route>
+  </Router> 
+	  */}
+  return (
+	<div className="app" >
+
+  
 	   <MenuExample items={ ['Home', 'Services', 'About', 'Contact us'] } />,
   <Contacts kind={user.name}/>
 		<Timer />
