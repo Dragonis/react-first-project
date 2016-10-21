@@ -53,21 +53,43 @@ var libraries = [
 
 class Home extends Component {
     render(){
-        return (<h1>Home Page</h1>);
+        return (
+				<div>
+					<h1>Home Page</h1> <br/>
+					aaaa <br/>
+					bbb<br/><br/>
+				</div>);
     }
 }
 
 // More components
 class Car extends Component {
     render(){
-        return (<h1>Cars page</h1>);
+        return (
+				<div>
+					<h1>Cars page</h1> <br/>
+					ccc <br/>
+					ddd<br/><br/>
+				</div>
+				);
     }
 }
 
 class About extends Component {
-    render(){
-        return (<h1>About page</h1>);
+
+  render(){
+	  var style = {
+      color: "red"
+    };
+        return (
+				<div style={style}>
+					<h1>About Page</h1><br/>
+					eee <br/>
+					fff<br/><br/>
+				</div>
+				);
     }
+
 }
 
 
@@ -86,6 +108,7 @@ class App extends React.Component {
       <a href="#/about">About</a>
 	  
     <Router>
+	<DefaultRoute handler={App}/>
         <Route path="/home" component={Home}/>
         <Route path="/cars" component={Car}/>
         <Route path="/about" component={About}/>
