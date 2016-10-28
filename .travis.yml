@@ -6,4 +6,4 @@ node_js:
   - npm install -g react-heatpack
 
 script:
-  - heatpack index.js
+  - heatpack index.js 
