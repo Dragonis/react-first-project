@@ -4,8 +4,8 @@
   "description": "Functional tests with Casper.js in Travis CI",
   "main": "index.html",
   "scripts": {
-    "preinstall": "npm i -g http-server casperjs",
-    "start": "http-server",
+    "preinstall": "npm i -g http-server casperjs heatpack",
+    "start": "http-server && heatpack index.js",
     "test": "casperjs test tests/"
   },
   "author": "Wojciech Sasiela",
