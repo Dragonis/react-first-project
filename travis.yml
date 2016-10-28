@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "6"
+ before_install:
+  - npm install npm -g 
+  - npm install -g react-heatpack
  before_script:
   - npm install npm -g 
   - npm install -g react-heatpack
