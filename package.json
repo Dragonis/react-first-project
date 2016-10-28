@@ -2,12 +2,12 @@
   "name": "casper-travis",
   "version": "0.0.1",
   "description": "Functional tests with Casper.js in Travis CI",
-  "main": "index.html",
+  "main": "test-casperjs.html",
   "scripts": {
     "preinstall": "npm i -g http-server casperjs",
     "start": "http-server",
     "test": "casperjs test tests/"
   },
-  "author": "Bogdan Plieshka bogdanplieshka@gmail.com https://godban.github.io",
+  "author": "Wojciech Sasiela",
   "license": "MIT"
 }
